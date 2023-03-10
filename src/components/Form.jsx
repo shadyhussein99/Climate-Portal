@@ -2,11 +2,25 @@
 // The section where the user enters the requested city
 
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function Form(props) {
 
     var [userInput, setUserInput] = useState("")   // saves the user input before clicking to get the results
+
+    useEffect(function () {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.savedInput}&appid=64b15dec72dea3abefff806d579e1177&units=metric`)
+            .then(res => res.json())
+            .then((res) => {
+                const { main, weather, wind } = res
+                const [theWeather] = weather
+                props.setMain(main)
+                props.setWind(wind)
+                props.setTheWeather(theWeather);
+            })
+            .catch(err => console.log(err));
+    }, [props.savedInput])
+
 
     function handleChange(event) {
         setUserInput(event.target.value)

@@ -15,7 +15,7 @@ function Reports() {
             <p>Key reports on climate impacts and solutions from around the United Nations.</p>
             <h2 className="reports-h2">What's New</h2>
             <div className="row">
-                <div className="col col-lg-3 col-sm-12">
+                <div className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports1.PNG"
                         reportHeading="UNEP & WMO | Scientific Assessment of Ozone Depletion"
@@ -24,7 +24,7 @@ function Reports() {
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-firstImg"
                     />
                 </div>
-                <div className="col col-lg-3 col-sm-12">
+                <div className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports2.PNG"
                         reportHeading="WMO | Greenhouse Gas Bulletin 2022"
@@ -33,7 +33,7 @@ function Reports() {
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-secondImg"
                     />
                 </div>
-                <div className="col col-lg-3 col-sm-12">
+                <div className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports3.PNG"
                         reportHeading="WMO | Provisional State of the Global Climate 2022"
@@ -42,7 +42,7 @@ function Reports() {
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-thirdImg"
                     />
                 </div>
-                <div className="col col-lg-3 col-sm-12">
+                <div className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports4.PNG"
                         reportHeading="WMO | We are United in Science (2020)"

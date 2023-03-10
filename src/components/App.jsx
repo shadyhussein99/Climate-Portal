@@ -2,7 +2,7 @@
 // section of the home page
 
 import React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Navbar from "./Navbar"
 import Form from "./Form"
 import Title from "./Title"
@@ -19,26 +19,17 @@ function App() {
   var [theWeather, setTheWeather] = useState("")   //  Related to API data
   var [theStats, setTheStats] = useState(false)    //  State responsible for showing and disappearing the results section
 
-  useEffect(function () {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${savedInput}&appid=64b15dec72dea3abefff806d579e1177&units=metric`)
-      .then(res => res.json())
-      .then((res) => {
-        const { main, weather, wind } = res
-        const [theWeather] = weather
-        setMain(main)
-        setWind(wind)
-        setTheWeather(theWeather);
-      })
-      .catch(err => console.log(err));
-  }, [savedInput])
-
   return (
     <div>
       <Navbar />
       <Title />
       <Form
+        savedInput={savedInput}
         setSavedInput={setSavedInput}
         setTheStats={setTheStats}
+        setMain={setMain}
+        setWind={setWind}
+        setTheWeather={setTheWeather}
       />
       {theStats && <Stats
         savedInput={savedInput}
