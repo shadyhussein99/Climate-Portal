@@ -15,7 +15,7 @@ Run the application
 npm run dev
 
 # Preview of the app
-![climate-portal1](https://user-images.githubusercontent.com/123125924/226007719-67c304cf-fd31-4db4-beb1-656b0d074c01.PNG)
+![climate-portal1](https://user-images.githubusercontent.com/123125924/226024810-22b04aee-443a-4f5c-b2a1-8bffdeb1b878.PNG)
 
 ![climate-portal2](https://user-images.githubusercontent.com/123125924/226010150-680ee5c5-373b-4e8f-8b59-b9cc60982eee.PNG)
 
