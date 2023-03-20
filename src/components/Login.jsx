@@ -64,7 +64,7 @@ function Login() {
     return <div>
         <Navbar />
         <div className="container register-div">
-            <img className="register-img" src="../public/pics/earth.jpeg" alt="earth-pic" />
+            <img className="register-img" src={"../public/pics/earth.jpeg"} alt="earth-pic" />
             <h3 className="register-h3">Log in to your account</h3>
 
             <MiniForm
