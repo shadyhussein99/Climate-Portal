@@ -49,7 +49,7 @@ function Features() {
                 </ul>
             </div>
             <div className="col-lg-6 col-sm-12">
-                <img className="features-img" src={"./public/pics/map.PNG"} alt="world-pic" />
+                <img className="features-img" src="/pics/map.PNG" alt="world-pic" />
             </div>
         </div>
     </div>
