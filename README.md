@@ -1,5 +1,5 @@
 # Climate-Portal
-Get live weather conditions in any City
+Get live weather conditions in any City, fetching real live data using RESTful API
 
 # Installation
 To run the chrome extention locally, use the following commands
