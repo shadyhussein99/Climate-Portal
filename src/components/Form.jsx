@@ -9,8 +9,8 @@ function Form(props) {
     var [userInput, setUserInput] = useState("")   // saves the user input before clicking to get the results
 
     useEffect(function () {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.savedInput}&appid=64b15dec72dea3abefff806d579e1177&units=metric`)
-            .then(res => res.json())
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.savedInput}&appid=${import.meta.env.VITE_REACT_API_KEY}&units=metric`)
+            .then((res) => res.json())
             .then((res) => {
                 const { main, weather, wind } = res
                 const [theWeather] = weather
