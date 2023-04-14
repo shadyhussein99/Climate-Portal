@@ -8,14 +8,15 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 function Reports() {
-    return <div>
+    return <section>
         <Navbar />
-        <div className="container reports-div">
+        <article className="container reports-div">
             <h1 className="reports-h1">Climate Reports</h1>
             <p>Key reports on climate impacts and solutions from around the United Nations.</p>
             <h2 className="reports-h2">What's New</h2>
-            <div className="row">
-                <div className="col-lg-3 col-sm-12">
+
+            <article className="row">
+                <article className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports1.PNG"
                         reportHeading="UNEP & WMO | Scientific Assessment of Ozone Depletion"
@@ -23,8 +24,8 @@ function Reports() {
                         reportLink="https://ozone.unep.org/system/files/documents/Scientific-Assessment-of-Ozone-Depletion-2022-Executive-Summary.pdf"
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-firstImg"
                     />
-                </div>
-                <div className="col-lg-3 col-sm-12">
+                </article>
+                <article className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports2.PNG"
                         reportHeading="WMO | Greenhouse Gas Bulletin 2022"
@@ -32,8 +33,8 @@ function Reports() {
                         reportLink="https://public.wmo.int/en/greenhouse-gas-bulletin"
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-secondImg"
                     />
-                </div>
-                <div className="col-lg-3 col-sm-12">
+                </article>
+                <article className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports3.PNG"
                         reportHeading="WMO | Provisional State of the Global Climate 2022"
@@ -41,8 +42,8 @@ function Reports() {
                         reportLink="https://storymaps.arcgis.com/stories/5417cd9148c248c0985a5b6d028b0277"
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-thirdImg"
                     />
-                </div>
-                <div className="col-lg-3 col-sm-12">
+                </article>
+                <article className="col-lg-3 col-sm-12">
                     <MiniReportsLatest
                         reportImage="../public/pics/reports-pics/reports4.PNG"
                         reportHeading="WMO | We are United in Science (2020)"
@@ -50,8 +51,9 @@ function Reports() {
                         reportLink="https://public.wmo.int/en/resources/united_in_science"
                         LatestImgClass="miniReportsLatest-img miniReportsLatest-fourthImg"
                     />
-                </div>
-            </div>
+                </article>
+            </article>
+            
             <h2 className="reports-h2">All Reports</h2>
             <MiniReportsOthers
                 reportImage="..\public\pics\reports-pics\reports5.PNG"
@@ -101,9 +103,9 @@ function Reports() {
                 reportParagraph="The tell-tale physical signs of climate change, such as increasing land and ocean heat, accelerating sea level rise and melting ice, contributed to making 2019 the second warmest year on record according to a new report compiled by a network led by the World Meteorological Organization. The report documents the increasing impacts of weather and climate events on socio-economic development, human health, migration and displacement, food security and land and marine ecosystems."
                 reportLink="https://library.wmo.int/doc_num.php?explnum_id=10211"
             />
-        </div>
+        </article>
         <Footer />
-    </div>
+    </section>
 }
 
 export default Reports

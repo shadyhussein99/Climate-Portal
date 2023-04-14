@@ -4,11 +4,11 @@
 import React from "react"
 
 function MiniFeatures(props) {
-    return <div className="miniFeatures-div">
+    return <section className="miniFeatures-div">
         <i className={props.iconClass}></i>
         <p><strong>{props.heading}</strong></p>
         <p>{props.paragraph}</p>
-    </div>
+    </section>
 }
 
 export default MiniFeatures

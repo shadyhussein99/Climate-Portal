@@ -7,10 +7,10 @@ import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 function Science() {
-    return <div>
+    return <section>
         <Navbar />
         <h1 className="science-h1">Science Information</h1>
-        <div className="container science-div">
+        <article className="container science-div">
             <MiniScience
                 scienceHeading="What Is Climate Change?"
                 scienceFirstParagraph="Climate change refers to long-term shifts in temperatures and weather patterns. These shifts may be natural, such as through variations in the solar cycle. But since the 1800s, human activities have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil and gas."
@@ -38,9 +38,9 @@ function Science() {
                 miniScienceImgClass="miniScience-third-img"
             />
 
-        </div>
+        </article>
         <Footer />
-    </div>
+    </section>
 }
 
 export default Science

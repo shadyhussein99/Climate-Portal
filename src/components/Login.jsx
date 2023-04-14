@@ -63,7 +63,8 @@ function Login() {
 
     return <div>
         <Navbar />
-        <div className="container register-div">
+        <section className="container register-div">
+        
             <img className="register-img" src="../public/pics/earth.jpeg" alt="earth-pic" />
             <h3 className="register-h3">Log in to your account</h3>
 
@@ -93,8 +94,10 @@ function Login() {
 
             {!Password && <p className="register-invalid">At least 8 characters long</p>}
 
-            {disableButton ? <Link to="/"><button type="button" class="register-button btn btn-primary">Login</button></Link> : <Link to=""><button type="button" class="register-button btn btn-primary" disabled>Login</button></Link>}
-        </div>
+            {disableButton ? <Link to="/"><button type="button" class="register-button btn btn-primary">Login</button></Link> :
+             <Link to=""><button type="button" class="register-button btn btn-primary" disabled>Login</button></Link>}
+
+        </section>
         <Footer />
     </div>
 }

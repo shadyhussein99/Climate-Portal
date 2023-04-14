@@ -35,21 +35,25 @@ function Form(props) {
         } else { props.setTheStats(false) }
     }
 
-    return <div className="form-div">
-        <div className="container">
+    return <section className="form-div">
+        <section className="container">
             <form>
                 <label><h1 className="form-h1">Required City:</h1></label>
-                <div className="row form-row">
-                    <div className="col col-lg-6">
+
+                <section className="row form-row">
+
+                    <section className="col col-lg-6">
                         <input onChange={handleChange} value={userInput} className="form-control form-input" type="text" placeholder="City.." />
-                    </div>
-                    <div className="col col-lg-6">
+                    </section>
+
+                    <section className="col col-lg-6">
                         <button onClick={handleClick} className="form-button">Get Results</button>
-                    </div>
-                </div>
+                    </section>
+
+                </section>
             </form>
-        </div>
-    </div>
+        </section>
+    </section>
 }
 
 export default Form

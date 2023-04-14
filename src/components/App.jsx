@@ -20,7 +20,7 @@ function App() {
   var [theStats, setTheStats] = useState(false)    //  State responsible for showing and disappearing the results section
 
   return (
-    <div>
+    <main>
       <Navbar />
       <Title />
       <Form
@@ -42,7 +42,7 @@ function App() {
       />}
       <Features />
       <Footer />
-    </div>
+    </main>
   )
 }
 

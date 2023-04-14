@@ -4,7 +4,7 @@
 import React from "react"
 
 function MiniScience(props) {
-    return <div>
+    return <article>
         <h2 className="miniScience-h2">{props.scienceHeading}</h2>
 
         <p className="miniScience-p">{props.scienceFirstParagraph}</p>
@@ -12,7 +12,7 @@ function MiniScience(props) {
         <p className="miniScience-p">{props.scienceThirdParagraph}</p>
 
         <img className={props.miniScienceImgClass} src={props.scienceImage} alt="earth-img" />
-    </div>
+    </article>
 }
 
 export default MiniScience
