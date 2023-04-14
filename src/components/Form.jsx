@@ -10,7 +10,7 @@ function Form(props) {
 
     useEffect(function () {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${props.savedInput}&appid=64b15dec72dea3abefff806d579e1177&units=metric`)
-            .then(res => res.json())
+            .then((res) => res.json())
             .then((res) => {
                 const { main, weather, wind } = res
                 const [theWeather] = weather

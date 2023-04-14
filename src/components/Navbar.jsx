@@ -5,6 +5,7 @@ import React from "react"
 import { Link } from "react-router-dom";
 
 function Navbar() {
+
     return <nav className="navbar navbar-expand-lg navbar-dark">
 
         <Link className="nav-heading" to="/"><img className="earth-img" src="../public/pics/earth.jpeg" alt="earth-img" /> Climate Portal</Link>

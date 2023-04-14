@@ -82,6 +82,7 @@ function Register() {
 
     return <section>
         <Navbar />
+
         <section className="container register-div">
 
             <img className="register-img" src="../public/pics/earth.jpeg" alt="earth-pic" />

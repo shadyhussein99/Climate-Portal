@@ -39,7 +39,6 @@ function Features() {
         </section>
 
         <section className="row features-second-row">
-
             <section className="col-lg-6 col-sm-12 features-secondRow-firstCol">
                 <h3 className="features-h3">Access to Global Weather Data</h3>
                 <p>Get instant access to accurate weather data for any location in the world and enjoy a rich set of capabilities:</p>
@@ -50,12 +49,11 @@ function Features() {
                     <li>Accurate Information</li>
                 </ul>
             </section>
-
             <section className="col-lg-6 col-sm-12">
                 <img className="features-img" src="./public/pics/map.PNG" alt="world-pic" />
             </section>
-
         </section>
+
     </section>
 }
 
