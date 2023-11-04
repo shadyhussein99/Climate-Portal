@@ -9,6 +9,8 @@ import ReactGA from "react-ga4"; // For Google Analytics
 
 function Science() {
 
+
+    /******* * For Google Analytics *********/
   const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
@@ -32,11 +34,16 @@ function Science() {
   };
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("scroll", trackScrollEvent);
     return () => {
       document.removeEventListener("scroll", trackScrollEvent);
     };
   }, []);
+  /*****************/
 
   return (
     <section>

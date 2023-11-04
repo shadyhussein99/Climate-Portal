@@ -8,6 +8,8 @@ import ReactGA from "react-ga4";  // For Google Analytics
 
 function About() {
 
+
+  /******* * For Google Analytics *********/
   const [isMounted, setIsMounted] = useState(true);
 
     useEffect(() => {
@@ -31,11 +33,16 @@ function About() {
   };
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("scroll", trackScrollEvent);
     return () => {
       document.removeEventListener("scroll", trackScrollEvent);
     };
   }, []);
+    /*****************/
 
     return <section>
         <Navbar />
