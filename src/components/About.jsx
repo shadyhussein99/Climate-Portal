@@ -21,7 +21,7 @@ function About() {
       window.innerHeight || document.documentElement.clientHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition + windowHeight >= documentHeight) {
+    if (scrollPosition + windowHeight + 350 >= documentHeight) {
       ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in About" });
     }
   };
