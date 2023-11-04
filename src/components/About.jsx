@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useState, useEffect} from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 
@@ -7,6 +7,8 @@ import ReactGA from "react-ga4";  // For Google Analytics
 // The about section
 
 function About() {
+
+  const [isMounted, setIsMounted] = useState(true);
 
     useEffect(() => {
       ReactGA.send({ hitType: "pageview", title: "Displayed About Page"});
@@ -21,9 +23,10 @@ function About() {
       window.innerHeight || document.documentElement.clientHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition + windowHeight + 350 >= documentHeight) {
+    if (scrollPosition + windowHeight + 350 >= documentHeight && isMounted) {
       ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in About" });
       document.removeEventListener("scroll", trackScrollEvent);
+      setIsMounted(false);
     }
   };
 

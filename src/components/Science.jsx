@@ -1,6 +1,6 @@
 // Science section
 
-import React, { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import MiniScience from "./MiniScience";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -9,6 +9,7 @@ import ReactGA from "react-ga4"; // For Google Analytics
 
 function Science() {
 
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
     ReactGA.send({ hitType: "pageview", title: "Displayed Science Page"});
@@ -23,9 +24,10 @@ function Science() {
       window.innerHeight || document.documentElement.clientHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition + windowHeight + 350 >= documentHeight) {
+    if (scrollPosition + windowHeight + 350 >= documentHeight && isMounted) {
       ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in Science" });
       document.removeEventListener("scroll", trackScrollEvent);
+      setIsMounted(false);
     }
   };
 
