@@ -46,7 +46,7 @@ const router = createBrowserRouter([
 
 
 // This key should be in .env
-ReactGA.initialize("G-H2D7LY8XME");
+ReactGA.initialize("G-4HSEPT7WEM");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname});
 
 
