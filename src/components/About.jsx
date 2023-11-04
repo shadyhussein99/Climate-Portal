@@ -1,10 +1,41 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+
+import ReactGA from "react-ga4";  // For Google Analytics
 
 // The about section
 
 function About() {
+
+    useEffect(() => {
+        ReactGA.pageview("Displayed About Page");
+      }, []);
+  
+
+        // Track the scroll to bottom event in Google Analysis
+  const trackScrollEvent = () => {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition + windowHeight - 450 >= documentHeight) {
+      ReactGA.event({
+        category: "Scroll",
+        action: "Scrolled to bottom in About",
+      });
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", trackScrollEvent);
+    return () => {
+      document.removeEventListener("scroll", trackScrollEvent);
+    };
+  }, []);
+
     return <section>
         <Navbar />
         <section className="container">
