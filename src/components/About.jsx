@@ -23,6 +23,7 @@ function About() {
 
     if (scrollPosition + windowHeight + 350 >= documentHeight) {
       ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in About" });
+      document.removeEventListener("scroll", trackScrollEvent);
     }
   };
 
