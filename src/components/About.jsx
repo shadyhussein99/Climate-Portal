@@ -9,7 +9,7 @@ import ReactGA from "react-ga4";  // For Google Analytics
 function About() {
 
     useEffect(() => {
-        ReactGA.pageview("Displayed About Page");
+      ReactGA.send({ hitType: "pageview", title: "Displayed About Page"});
       }, []);
   
 
@@ -21,11 +21,8 @@ function About() {
       window.innerHeight || document.documentElement.clientHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition + windowHeight - 450 >= documentHeight) {
-      ReactGA.event({
-        category: "Scroll",
-        action: "Scrolled to bottom in About",
-      });
+    if (scrollPosition + windowHeight >= documentHeight) {
+      ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in About" });
     }
   };
 

@@ -11,7 +11,7 @@ function Science() {
 
 
   useEffect(() => {
-    ReactGA.pageview("Displayed Science Page");
+    ReactGA.send({ hitType: "pageview", title: "Displayed Science Page"});
   }, []);
   
 
@@ -23,11 +23,8 @@ function Science() {
       window.innerHeight || document.documentElement.clientHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    if (scrollPosition + windowHeight - 450 >= documentHeight) {
-      ReactGA.event({
-        category: "Scroll",
-        action: "Scrolled to bottom in Science",
-      });
+    if (scrollPosition + windowHeight >= documentHeight) {
+      ReactGA.send({ hitType: "event", eventCategory: "Scroll", eventAction: "Scrolled to the Bottom in Science" });
     }
   };
 

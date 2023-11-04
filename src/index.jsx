@@ -1,7 +1,7 @@
 
 // Main file
 
-import React, {useEffect} from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './components/App'
 import About from './components/About'
@@ -44,11 +44,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-useEffect(() => {
+
 // This key should be in .env
 ReactGA.initialize("G-H2D7LY8XME");
 ReactGA.send({ hitType: "pageview", page: window.location.pathname});
-}, [])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
